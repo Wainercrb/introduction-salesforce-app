@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Device List" icon-name="custom:custom63">
+        <ul if:true={device.data} class="slds-var-m-around_medium">
+            <template for:each={device.data} for:item="d">
+                <li key={d.Id}>
+                    {d.Name}, {d.Model__c}
+                </li>
+            </template>
+        </ul>
+    </lightning-card>
+</template>
